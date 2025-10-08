@@ -19,3 +19,5 @@ PS1='\e[34m\]\w\[\e[m\]\n\\$ '
 
 export TERM=xterm-256color
 
+eval "$(mise activate bash)"
+
