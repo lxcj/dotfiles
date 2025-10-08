@@ -1,0 +1,8 @@
+[alias]
+	c = commit
+	co = checkout
+	br = branch
+	s = status
+[init]
+	defaultBranch = main
+
