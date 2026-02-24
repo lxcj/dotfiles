@@ -15,6 +15,9 @@ alias find='fd'
 alias cat='bat --theme="Dracula"'
 alias cd..='cd ..'
 alias tree='tree -C'
+alias tr='tree'
+alias ff='fastfetch'
+alias v='nvim'
 
 # Custom prompt
 PS1='\e[34m\]\w\[\e[m\]\n\\$ '
