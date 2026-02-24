@@ -23,3 +23,5 @@ export TERM=xterm-256color
 
 eval "$(mise activate bash)"
 
+export PATH=~/.config/composer/vendor/bin:$PATH
+
