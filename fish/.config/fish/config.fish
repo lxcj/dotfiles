@@ -13,10 +13,15 @@ if status is-interactive
 end
 
 set fish_greeting
-bind tab accept-autosuggestion
 
 export TERM=xterm-256color
 
 starship init fish | source
 mise activate fish | source
+
+# Functions
+function serve
+  echo "Serving on http://localhost:7777"
+  php -S 0.0.0.0:7777
+end
 
