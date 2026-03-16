@@ -34,6 +34,13 @@ alias cat='bat --theme="Dracula"'
 alias grep='rg'
 alias find='fd'
 
+# Functions
+serve() {
+  echo "Serving on http://localhost:7777"
+  php -S 0.0.0.0:7777
+}
+
 # mise
 eval "$(mise activate zsh)"
+
 
