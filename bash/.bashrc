@@ -6,18 +6,9 @@
 [[ $- != *i* ]] && return
 
 # Aliases
-alias ls='ls --color=auto'
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
 alias grep='rg'
 alias find='fd'
 alias cat='bat --theme="Dracula"'
-alias cd..='cd ..'
-alias tree='tree -C'
-alias tr='tree'
-alias ff='fastfetch'
-alias v='nvim'
 
 # Custom prompt
 PS1='\e[34m\]\w\[\e[m\]\n\\$ '
