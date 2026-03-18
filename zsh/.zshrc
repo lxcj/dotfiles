@@ -33,6 +33,7 @@ export EDITOR='nvim'
 alias cat='bat --theme="Dracula"'
 alias grep='rg'
 alias find='fd'
+alias hx='helix'
 
 # Functions
 serve() {
@@ -42,5 +43,4 @@ serve() {
 
 # mise
 eval "$(mise activate zsh)"
-
 
