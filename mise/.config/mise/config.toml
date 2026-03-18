@@ -3,3 +3,8 @@ bun = "latest"
 node = "latest"
 php = "latest"
 usage = "latest"
+
+[settings]
+
+[settings.ruby]
+compile = false
