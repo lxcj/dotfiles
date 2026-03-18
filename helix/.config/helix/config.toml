@@ -1,9 +1,13 @@
 theme = "dracula"
 
+[editor]
+true-color = true
+color-modes = true
+
 [editor.statusline]
 left = ["mode", "spinner"]
-center = []
-right = ["diagnostics", "file-name", "selections", "position",   "file-type"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-type"]
 separator = "│"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
@@ -11,5 +15,11 @@ mode.select = "SELECT"
 diagnostics = ["warning", "error"]
 workspace-diagnostics = ["warning", "error"]
 
+[editor.indent-guides]
+render = true
+character = "╎"
+skip-levels = 1
+
 [keys.insert]
 C-s = ["normal_mode", ":w", "insert_mode"]
+
