@@ -37,6 +37,7 @@ alias cat='bat --theme="Dracula"'
 alias grep='rg'
 alias find='fd'
 alias hx='helix'
+alias z='zellij'
 
 # Functions
 serve() {
