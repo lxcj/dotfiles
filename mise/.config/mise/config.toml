@@ -2,6 +2,7 @@
 bun = "latest"
 node = "latest"
 php = "latest"
+ruby = "3.4.8"
 usage = "latest"
 
 [settings]
