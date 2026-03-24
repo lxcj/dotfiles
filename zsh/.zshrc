@@ -3,6 +3,12 @@
 export PATH="$HOME/.bun/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+export FPATH="/usr/bin/eza/completions/zsh:$FPATH"
+
+# Add ruby gems to $PATH
+if which ruby >/dev/null && which gem >/dev/null; then
+  export PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+fi
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -27,7 +33,7 @@ plugins=(git zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export EDITOR='nvim'
+export EDITOR='helix'
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -38,6 +44,7 @@ alias grep='rg'
 alias find='fd'
 alias hx='helix'
 alias z='zellij'
+alias ls='eza --icons --group-directories-first -F'
 
 # Functions
 serve() {
