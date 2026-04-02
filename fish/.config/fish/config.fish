@@ -4,6 +4,7 @@ end
 
 set fish_greeting
 export TERM=xterm-256color
+export EDITOR=helix
 
 # Set PATH
 set -gx PATH "$HOME/.bun/bin" $PATH
@@ -20,17 +21,19 @@ end
 
 # Aliases
 alias cat 'bat --theme="Dracula"'
-alias ls 'eza --icons --group-directories-first -F'
-alias grep rg
-alias find fd
+alias ls 'eza --icons -1F --group-directories-first'
+alias la 'ls -a'
+alias ll 'ls -l'
+alias lla 'ls -la'
+alias lt 'ls --tree'
 alias hx helix
 alias z zellij
-
-# mise
-mise activate fish | source
 
 # Functions
 function serve
     echo "Serving on http://localhost:7777"
     php -S 0.0.0.0:7777
 end
+
+mise activate fish | source
+starship init fish | source

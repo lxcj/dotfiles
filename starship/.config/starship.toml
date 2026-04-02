@@ -3,20 +3,18 @@ add_newline = true
 format = """
 $directory\
 $git_branch\
-$cmd_duration\
 $line_break\
 
 $character"""
 
 [directory]
 format = "[$path]($style) "
+style = "blue"
 
 [character]
-success_symbol = "[❯](green)"
+success_symbol = "[❯](purple)"
 error_symbol = "[❯](red)"
-
-vimcmd_symbol = "[❮](purple)"
-
+vimcmd_symbol = "[❮](green)"
 
 # Disable the package module, hiding it from the prompt completely
 [package]

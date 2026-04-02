@@ -2,6 +2,7 @@
 bun = "latest"
 node = "latest"
 php = "latest"
+python = "3"
 ruby = "3.4.8"
 usage = "latest"
 
