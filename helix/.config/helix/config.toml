@@ -3,6 +3,7 @@ theme = "dracula"
 [editor]
 true-color = true
 color-modes = true
+insert-final-newline = true
 
 [editor.statusline]
 left = ["mode", "spinner"]
