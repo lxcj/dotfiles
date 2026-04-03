@@ -6,7 +6,7 @@ SETUVAR __fish_webconfig_theme_notification:set\x2dtheme\x2dv1\x2d\x231
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:6272a4\x1e\x2d\x2dtheme\x3ddracula
 SETUVAR fish_color_cancel:ff5555\x1e\x2d\x2dreverse\x1e\x2d\x2dtheme\x3ddracula
-SETUVAR fish_color_command:8be9fd\x1e\x2d\x2dtheme\x3ddracula
+SETUVAR fish_color_command:\x2d\x2dunderline
 SETUVAR fish_color_comment:6272a4\x1e\x2d\x2dtheme\x3ddracula
 SETUVAR fish_color_cwd:50fa7b\x1e\x2d\x2dtheme\x3ddracula
 SETUVAR fish_color_cwd_root:red\x1e\x2d\x2dtheme\x3ddracula
