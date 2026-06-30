@@ -1,0 +1,17 @@
+[settings.npm]
+package_manager = "pnpm"
+
+[settings.ruby]
+compile = false
+
+[settings.python]
+compile = false
+
+[tools]
+helix = "latest"
+node = "latest"
+"npm:vscode-langservers-extracted" = "latest"
+pnpm = "latest"
+ruby = "latest"
+rust = "latest"
+"gem:ruby-lsp" = "latest"
