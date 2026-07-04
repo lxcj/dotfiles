@@ -1,12 +1,19 @@
+#!/usr/bin/env bash
+
 # history config
-export HISTSIZE=1000
-export HISTFILESIZE=2000
+export HISTSIZE=1500
+export HISTFILESIZE=3000
 export HISTCONTROL=ignoreboth
-export HISTIGNORE="ls:ll:cd:pwd:clear:history"
+export HISTIGNORE="ls:la:ll:lla:cd:pwd:clear:history"
+export HISTTIMEFORMAT="[%F %T] " # timestamp
 shopt -s histappend # append to the history file, don't overwrite it
 
 # check the window size after each command
 shopt -s checkwinsize
+
+# set locale and encoding
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 
 # set terminal colors
 export TERM="xterm-256color"
@@ -37,7 +44,7 @@ if [ -d "$HOME/.local/bin" ]; then
 fi
 
 # custom prompt
-PS1='\[\033[01;34m\]\w\[\033[00m\]\n❯ '
+PS1='\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " on  %s")\[\033[00m\]\n❯ '
 
 # ls aliases
 alias ls='ls -1Fv --group-directories-first --color=auto'
@@ -45,13 +52,20 @@ alias la='ls -A'
 alias ll='ls -l'
 alias lla='ls -lA'
 
+# mkdir
+alias mkdir="mkdir -p"
+
 # bat
 alias cat='batcat --plain'
 
 # fd
 alias fd='fdfind'
 
+# grep
+alias grep='grep --color=auto'
+
 # git abbreviations
+alias g='git'
 alias gs='git status'
 alias gc='git commit'
 
