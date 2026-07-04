@@ -1,12 +1,20 @@
 #!/usr/bin/env bash
 
-# history config
-export HISTSIZE=1500
-export HISTFILESIZE=3000
-export HISTCONTROL=ignoreboth
-export HISTIGNORE="ls:la:ll:lla:cd:pwd:clear:history"
-export HISTTIMEFORMAT="[%F %T] " # timestamp
-shopt -s histappend # append to the history file, don't overwrite it
+# HSTR configuration - add this to ~/.bashrc
+export HSTR_CONFIG=hicolor       # get more colors
+shopt -s histappend              # append new history items to .bash_history
+export HISTCONTROL=ignorespace   # leading space hides commands from history
+export HISTFILESIZE=10000        # increase history file size (default is 500)
+export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
+# ensure synchronization between bash memory and history file
+export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
+function hstrnotiocsti {
+    { READLINE_LINE="$( { </dev/tty hstr ${READLINE_LINE}; } 2>&1 1>&3 3>&- )"; } 3>&1;
+    READLINE_POINT=${#READLINE_LINE}
+}
+# if this is interactive shell, then bind hstr to Ctrl-r (for Vi mode check doc)
+if [[ $- =~ .*i.* ]]; then bind -x '"\C-r": "hstrnotiocsti"'; fi
+export HSTR_TIOCSTI=n
 
 # check the window size after each command
 shopt -s checkwinsize
@@ -44,6 +52,7 @@ if [ -d "$HOME/.local/bin" ]; then
 fi
 
 # custom prompt
+source /usr/share/git-core/contrib/completion/git-prompt.sh
 PS1='\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " on  %s")\[\033[00m\]\n❯ '
 
 # ls aliases
@@ -56,7 +65,7 @@ alias lla='ls -lA'
 alias mkdir="mkdir -p"
 
 # bat
-alias cat='batcat --plain'
+alias cat='bat --plain'
 
 # fd
 alias fd='fdfind'
