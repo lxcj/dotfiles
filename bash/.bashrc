@@ -53,7 +53,7 @@ fi
 
 # custom prompt
 source /usr/share/git-core/contrib/completion/git-prompt.sh
-PS1='\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " on  %s")\[\033[00m\]\n❯ '
+PS1='\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " on \[\e[35m\] %s\[\e[m\]")\[\033[00m\]\n❯ '
 
 # ls aliases
 alias ls='ls -1Fv --group-directories-first --color=auto'

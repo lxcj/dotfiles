@@ -1,0 +1,146 @@
+"ui.background" = { fg = "text", bg = "base" }
+"ui.background.separator" = { bg = "base" }
+
+"ui.cursor" = { fg = "text", bg = "highlight_high" }
+"ui.cursor.match" = { fg = "text", bg = "highlight_med" }
+"ui.cursor.primary" = { fg = "text", bg = "muted" }
+
+"ui.linenr" = { fg = "muted" }
+"ui.linenr.selected" = { fg = "text" }
+
+"ui.bufferline" = { fg = "muted", bg = "base" }
+"ui.bufferline.active" = { fg = "text", bg = "overlay" }
+"ui.statusline" = { fg = "subtle", bg = "surface" }
+"ui.statusline.inactive" = { fg = "muted", bg = "surface" }
+"ui.statusline.normal" = { fg = "pink", bg = "pink_10" }
+"ui.statusline.insert" = { fg = "cyan", bg = "cyan_10" }
+"ui.statusline.select" = { fg = "purple", bg = "purple_10" }
+
+"ui.popup" = { fg = "text", bg = "surface" }
+
+"ui.picker.header" = { fg = "purple", modifiers = ["bold"] }
+
+"ui.window" = { fg = "overlay", bg = "base" }
+"ui.help" = { fg = "subtle", bg = "overlay" }
+
+"ui.text" = { fg = "text" }
+"ui.text.focus" = { bg = "overlay" }
+"ui.text.info" = { fg = "subtle" }
+
+"ui.virtual.jump-label" = { fg = "red", modifiers = ["bold"] }
+"ui.virtual.ruler" = { bg = "overlay" }
+"ui.virtual.whitespace" = { fg = "highlight_high" }
+"ui.virtual.indent-guide" = { fg = "muted" }
+"ui.virtual.inlay-hint" = { fg = "subtle" }
+
+"ui.menu" = { fg = "subtle", bg = "surface" }
+"ui.menu.selected" = { fg = "text" }
+"ui.menu.scroll" = { fg = "muted", bg = "highlight_med" }
+
+"ui.selection" = { bg = "overlay" }
+"ui.selection.primary" = { bg = "highlight_med" }
+
+"ui.cursorline.primary" = { bg = "highlight_low" }
+"ui.cursorline.secondary" = { bg = "surface" }
+
+"warning" = "yellow"
+"error" = "red"
+"info" = "cyan"
+"hint" = "purple"
+"debug" = "pink"
+
+"diagnostic" = { underline = { color = "subtle", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "purple", style = "curl" } }
+"diagnostic.info" = { underline = { color = "cyan", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"special" = "pink"
+
+"attribute" = "purple"
+
+"type" = "cyan"
+
+"constructor" = "cyan"
+
+"constant" = "cyan"
+"constant.builtin" = "red"
+"constant.builtin.boolean" = "pink"
+"constant.character" = "yellow"
+"constant.character.escape" = "blue"
+"constant.numeric" = "yellow"
+
+"string" = "yellow"
+"string.special.symbol" = "purple"
+
+"comment" = { fg = "muted", modifiers = ["italic"] }
+
+"variable" = "text"
+"variable.builtin" = "red"
+"variable.parameter" = "purple"
+"variable.other.member" = "cyan"
+
+"label" = "cyan"
+
+"punctuation" = "subtle"
+
+"keyword" = "blue"
+"keyword.operator" = "subtle"
+
+"operator" = "subtle"
+
+"function" = "pink"
+"function.builtin" = { fg = "pink", modifiers = ["bold"] }
+
+"tag" = "cyan"
+
+"namespace" = "text"
+
+"markup.heading.marker" = "muted"
+"markup.heading" = { fg = "purple", modifiers = ["bold"] }
+"markup.heading.1" = { fg = "purple", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "cyan", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "pink", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "yellow", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "blue", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "cyan", modifiers = ["bold"] }
+"markup.list" = "muted"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link" = "purple"
+"markup.link.url" = { fg = "purple", underline = { color = "purple", style = "line" } }
+"markup.link.label" = "subtle"
+"markup.link.text" = "cyan"
+"markup.quote" = "subtle"
+"markup.raw" = "subtle"
+"markup.raw.inline" = "yellow"
+"markup.raw.block" = "yellow"
+
+"diff" = "overlay"
+"diff.plus" = "cyan"
+"diff.minus" = "red"
+"diff.delta" = "highlight_high"
+
+# TODO: give better names to these colors
+[palette]
+base           = "#27243b" 
+surface        = "#232033"
+overlay        = "#333049"
+muted          = "#7d6a87"
+subtle         = "#9f8caa"
+text           = "#d5ccea"
+red            = "#ea6e91"
+red_10         = "#3a2841"
+yellow         = "#edbbc1"
+yellow_10      = "#39313e"
+pink           = "#ea98be"
+pink_10        = "#392d41"
+blue           = "#ae89ed"
+blue_10        = "#252c44"
+cyan           = "#a0c1e8"
+cyan_10        = "#2e3248"
+purple         = "#9580ff"
+purple_10      = "#342e4a"
+highlight_low  = "#2a283e"
+highlight_med  = "#44415a"
+highlight_high = "#56526e"
