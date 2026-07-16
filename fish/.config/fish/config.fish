@@ -31,6 +31,7 @@ alias lla 'ls -lA'
 alias lt 'tree -L 3 -a -I ".git"'
 alias cat 'bat --plain'
 alias tmp 'cd $(mktemp -d)' # create a temp folder and cd
+alias operm 'stat -c "%a %n"' # show octal permission
 
 # Abbreviations
 abbr -a c clear
@@ -42,8 +43,9 @@ abbr -a gs git status -s
 abbr -a ga git add
 abbr -a ga. git add .
 abbr -a gc git commit
+abbr -a gca git commit -a
 abbr -a gl git log --oneline
-abbr -a glg git log --oneline --graph --stat
+abbr -a glg git log --oneline --graph --all --stat
 abbr -a clone git clone
 
 # FZF
@@ -55,6 +57,15 @@ set -Ux FZF_DEFAULT_OPTS "
 	--color=spinner:#f6c177,info:#9ccfd8
 	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
 fzf --fish | source
+
+# zmx
+functions -c fish_prompt _original_fish_prompt 2>/dev/null
+function fish_prompt --description 'Write out the prompt'
+    if set -q ZMX_SESSION
+        echo -n "[$ZMX_SESSION] "
+    end
+    _original_fish_prompt
+end
 
 # Activate mise
 mise activate fish | source
