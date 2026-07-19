@@ -6,6 +6,8 @@
   home.stateVersion = "26.05"; # You should not change this value
 
   home.packages = with pkgs; [
+    fd
+    ripgrep
     neovim
     nodejs_26
     pnpm
