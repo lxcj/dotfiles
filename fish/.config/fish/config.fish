@@ -35,18 +35,15 @@ alias operm 'stat -c "%a %n"' # show octal permission
 
 # Abbreviations
 abbr -a c clear
-abbr -a .. cd ..
-abbr -a cd.. cd ..
 abbr -a mkdir mkdir -p
 abbr -a g git
 abbr -a gs git status -s
 abbr -a ga git add
-abbr -a ga. git add .
 abbr -a gc git commit
 abbr -a gca git commit -a
 abbr -a gl git log --oneline
 abbr -a glg git log --oneline --graph --all --stat
-abbr -a clone git clone
+abbr nv nvim
 
 # FZF
 abbr -a f fzf
