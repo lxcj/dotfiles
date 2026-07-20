@@ -53,7 +53,7 @@
 
   programs.bat = {
     enable = true;
-    config.theme = "Dracula";
+    config.theme = "Catppuccin Macchiato";
   };
 
   programs.fish = {
@@ -104,28 +104,30 @@
     enable = true;
     enableFishIntegration = true;
     colors = {
-      # Rose Pine Moon
-      fg = "#908caa";
-      bg = "#232136";
-      hl = "#ea9a97";
-      "fg+" = "#e0def4";
-      "bg+" = "#393552";
-      "hl+" = "#ea9a97";
-      border = "#44415a";
-      header = "#3e8fb0";
+      # Catppuccin Macchiato
+      fg = "#cad3f5";
+      bg = "#24273a";
+      hl = "#ed8796";
+      "fg+" = "#cad3f5";
+      "bg+" = "#363a4f";
+      "hl+" = "#ed8796";
+      border = "#6e738d";
+      header = "#ed8796";
       gutter = "#232136";
-      spinner = "#f6c177";
-      info = "#9ccfd8";
-      pointer = "#c4a7e7";
-      marker = "#eb6f92";
-      prompt = "#908caa";
+      spinner = "#f4dbd6";
+      info = "#c6a0f6";
+      pointer = "#f4dbd6";
+      marker = "#b7bdf8";
+      prompt = "#c6a0f6";
+      selected-bg = "#494d64";
+      label = "#cad3f5";
     };
   };
 
   programs.helix = {
     enable = true;
     settings = {
-      theme = "rose_pine_moon";
+      theme = "catppuccin_macchiato";
       editor = {
         true-color = true;
         color-modes = true;
