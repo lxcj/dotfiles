@@ -95,6 +95,7 @@
       gca = "git commit -a";
       gl = "git log --oneline";
       glg = "git log --oneline --graph --all --stat";
+      gd = "git diff";
       nv = "nvim";
       f = "fzf";
     };
