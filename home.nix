@@ -28,6 +28,7 @@
     delve # go debugger
     golangci-lint
     golangci-lint-langserver
+    tree-sitter
   ];
 
   home.file = {
