@@ -6,6 +6,7 @@
   home.stateVersion = "26.05"; # You should not change this value
 
   home.packages = with pkgs; [
+    tree
     fd
     ripgrep
     neovim
