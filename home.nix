@@ -9,6 +9,7 @@
     tree
     fd
     ripgrep
+    navi
     neovim
     nodejs_26
     pnpm
