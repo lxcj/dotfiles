@@ -43,7 +43,7 @@
   # Home Manager can also manage environment variables here.
   home.sessionVariables = {
     TERM = "xterm-256color";
-    EDITOR = "hx";
+    EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself
