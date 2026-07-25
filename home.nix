@@ -6,31 +6,31 @@
   home.stateVersion = "26.05"; # You should not change this value
 
   home.packages = with pkgs; [
-    tree
-    fd
-    ripgrep
-    navi
+    tree fd ripgrep navi
     neovim
-    nodejs_26
-    pnpm
-    rustup
-    zig
-    go
 
-    # Language servers
-    nil # nix
-    nixfmt
+    rustup
     ruby-lsp
     bash-language-server
     lua-language-server
-    vscode-langservers-extracted # html/css/json
+    vscode-langservers-extracted
     taplo # toml
-    zls # zig
-    gotools
-    delve # go debugger
-    golangci-lint
-    golangci-lint-langserver
     tree-sitter
+
+    # Node.js
+    nodejs_26 pnpm
+
+    # Nix
+    nil nixfmt
+
+    # Zig
+    zig zls
+    
+    # Go
+    go gotools delve golangci-lint golangci-lint-langserver
+
+    # TypeScript
+    typescript-go typescript-language-server oxlint oxfmt
   ];
 
   home.file = {
