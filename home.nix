@@ -9,13 +9,15 @@
     tree fd ripgrep navi
     neovim
 
-    rustup
     ruby-lsp
     bash-language-server
     lua-language-server
     vscode-langservers-extracted
     taplo # toml
     tree-sitter
+
+    # Rust
+    rustc cargo clippy rust-analyzer rustfmt
 
     # Node.js
     nodejs_26 pnpm
