@@ -135,7 +135,6 @@
       editor = {
         true-color = true;
         color-modes = true;
-        bufferline = "always"; # Enable tab bar
         default-yank-register = "+";
       };
       editor.cursor-shape = {
