@@ -11,6 +11,12 @@
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
 
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+    pinentryPackage = pkgs.pinentry-tty;
+  };
+
   system.stateVersion = "26.05"; # Don't change this value
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
