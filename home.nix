@@ -18,7 +18,6 @@
     tree fd ripgrep navi
     neovim
 
-    ruby-lsp
     bash-language-server
     lua-language-server
     vscode-langservers-extracted
@@ -27,6 +26,9 @@
 
     # C tools
     gcc libclang lldb gnumake
+
+    # Ruby
+    ruby_4_0 ruby-lsp
 
     # Rust
     rustc cargo clippy rust-analyzer rustfmt
@@ -41,7 +43,7 @@
     zig zls
     
     # Go
-    go gotools delve golangci-lint golangci-lint-langserver
+    go gopls delve golangci-lint golangci-lint-langserver
 
     # TypeScript
     typescript-go typescript-language-server oxlint oxfmt
