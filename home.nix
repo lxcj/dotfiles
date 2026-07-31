@@ -10,19 +10,18 @@
     ./modules/fzf.nix
     ./modules/helix.nix
     ./modules/tmux.nix
-    # ./modules/mise.nix
     ./modules/tealdeer.nix
+    # ./modules/mise.nix
   ];
 
   home.packages = with pkgs; [
     tree fd ripgrep navi
-    neovim
+    neovim tree-sitter
 
     bash-language-server
     lua-language-server
-    vscode-langservers-extracted
-    taplo # toml
-    tree-sitter
+    vscode-langservers-extracted # HTML/CSS/JSON language servers
+    taplo # TOML language server
 
     # C tools
     gcc libclang lldb gnumake

@@ -1,10 +1,5 @@
 { config, lib, pkgs, ... }:
 {
-  imports = [
-    # include NixOS-WSL modules
-    # <nixos-wsl/modules>
-  ];
-
   wsl.enable = true;
   wsl.defaultUser = "lx";
 
@@ -21,10 +16,10 @@
     wget
   ];
 
-  system.stateVersion = "26.05"; # Don't change this value
+  # https://wiki.nixos.org/wiki/FAQ/When_do_I_update_stateVersion
+  system.stateVersion = "26.05";
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
   nix.optimise.automatic = true;
   nix.gc = {
     automatic = true;
