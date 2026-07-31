@@ -10,7 +10,7 @@
     ./modules/fzf.nix
     ./modules/helix.nix
     ./modules/tmux.nix
-    ./modules/mise.nix
+    # ./modules/mise.nix
     ./modules/tealdeer.nix
   ];
 
