@@ -14,6 +14,7 @@
 
   environment.systemPackages = with pkgs; [
     wget
+    uutils-coreutils-noprefix
   ];
 
   # https://wiki.nixos.org/wiki/FAQ/When_do_I_update_stateVersion
