@@ -1,4 +1,5 @@
 = dotfiles
 
+NixOS WSL config.
 Managed with https://nix-community.github.io/home-manager/[Home Manager].
 
