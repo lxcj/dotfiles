@@ -8,9 +8,6 @@ programs.mise = {
       ruby.compile = false;
       python.compile = false;
     };
-    tools = {
-      ruby = "4.0.6";
-    };
   };
 };
 }
