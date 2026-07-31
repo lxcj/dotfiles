@@ -16,6 +16,9 @@
     taplo # toml
     tree-sitter
 
+    # C tools
+    gcc libclang lldb gnumake
+
     # Rust
     rustc cargo clippy rust-analyzer rustfmt
 
