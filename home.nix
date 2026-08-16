@@ -12,6 +12,7 @@
     ./modules/tmux.nix
     ./modules/tealdeer.nix
     # ./modules/mise.nix
+    ./modules/opencode.nix
   ];
 
   home.packages = with pkgs; [
