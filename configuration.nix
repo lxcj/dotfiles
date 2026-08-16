@@ -29,4 +29,6 @@
   };
 
   security.sudo-rs.enable = true;
+
+  programs.nix-ld.enable = true;
 }
