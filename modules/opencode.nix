@@ -17,6 +17,18 @@
     tui = {
       theme = "catppuccin-macchiato";
     };
+    settings.permission = {
+      edit = "ask";
+      bash = {
+        "*" = "ask";
+        "git *" = "ask";
+        "git diff*" = "allow";
+        "git log*" = "allow";
+        "git show*" = "allow";
+        "git status*" = "allow";
+        "rm *" = "deny";
+      };
+    };
   };
 }
 
