@@ -37,7 +37,7 @@
       ga = "git add";
       gc = "git commit";
       gca = "git commit -a";
-      gl = "git log --oneline";
+      gl = "git log --oneline -n 20";
       glg = "git log --oneline --graph --all --stat";
       gd = "git diff";
       nv = "nvim";
