@@ -14,9 +14,14 @@
     };
   };
 
+  programs.jujutsu = {
+    enable = true;
+  };
+
   programs.delta = {
     enable = true;
     enableGitIntegration = true;
+    enableJujutsuIntegration = true;
     options = {
       navigate = false;
       line-numbers = true;
