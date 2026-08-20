@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 {
   wsl.enable = true;
   wsl.defaultUser = "lx";

@@ -10,7 +10,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-wsl, home-manager, ... }:
+  outputs = { nixpkgs, nixos-wsl, home-manager, ... }:
     let
       system = "x86_64-linux";
     in {
