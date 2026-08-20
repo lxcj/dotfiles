@@ -5,6 +5,7 @@
 
   imports = [
     ./modules/git.nix
+    ./modules/ssh.nix
     ./modules/bat.nix
     ./modules/fish.nix
     ./modules/fzf.nix
