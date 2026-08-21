@@ -15,6 +15,13 @@ in
     };
   };
 
+  programs.gh = {
+    enable = true;
+    settings = {
+      git_protocol = "ssh";
+    };
+  };
+
   programs.jujutsu = {
     enable = true;
     settings.user = gitUser;
