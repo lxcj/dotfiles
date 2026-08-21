@@ -48,6 +48,9 @@
 
     # TypeScript
     typescript-go typescript-language-server oxlint oxfmt
+
+    # Python
+    python3 ruff uv
   ];
 
   home.sessionVariables = {
