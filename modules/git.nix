@@ -8,12 +8,10 @@ in
 {
   programs.git = {
     enable = true;
-    settings.init.defaultBranch = "main";
-    settings.user = gitUser;
-    settings.url = {
-      "git@github.com:" = {
-        insteadOf = "https://github.com/";
-      };
+    settings = {
+      init.defaultBranch = "main";
+      user = gitUser;
+      url."git@github.com:".insteadOf = "https://github.com/";
     };
   };
 
