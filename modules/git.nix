@@ -1,12 +1,15 @@
 { ... }:
+let
+  gitUser = {
+    name = "lxcj";
+    email = "1714997+lxcj@users.noreply.github.com";
+  };
+in
 {
   programs.git = {
     enable = true;
     settings.init.defaultBranch = "main";
-    settings.user = {
-      name = "lxcj";
-      email = "1714997+lxcj@users.noreply.github.com";
-    };
+    settings.user = gitUser;
     settings.url = {
       "git@github.com:" = {
         insteadOf = "https://github.com/";
@@ -16,6 +19,7 @@
 
   programs.jujutsu = {
     enable = true;
+    settings.user = gitUser;
   };
 
   programs.delta = {
