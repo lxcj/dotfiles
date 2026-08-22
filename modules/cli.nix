@@ -36,4 +36,10 @@
       updates.auto_update = false;
     };
   };
+
+  programs.vivid = {
+    enable = true;
+    enableFishIntegration = true;
+    activeTheme = "catppuccin-macchiato";
+  };
 }
