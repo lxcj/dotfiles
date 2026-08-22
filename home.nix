@@ -12,12 +12,13 @@
     ./modules/helix.nix
     ./modules/tmux.nix
     ./modules/tealdeer.nix
+    ./modules/navi.nix
     # ./modules/mise.nix
     ./modules/opencode.nix
   ];
 
   home.packages = with pkgs; [
-    tree fd ripgrep navi
+    tree fd ripgrep
     neovim tree-sitter
 
     bash-language-server
