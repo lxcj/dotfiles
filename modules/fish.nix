@@ -21,27 +21,27 @@
       set fish_color_option normal
     '';
     shellAliases = {
+      cat = "bat --plain";
       ls = "ls -1Fv --group-directories-first --color=auto";
       la = "ls -A";
       ll = "ls -l";
       lla = "ls -lA";
       lt = "tree -L 3 -a -I '.git'";
-      cat = "bat --plain";
       tmp = "cd $(mktemp -d)"; # cd to a new temp folder
     };
     shellAbbrs = {
       c = "clear";
-      mkdir = "mkdir -p";
+      f = "fzf";
       g = "git";
       gs = "git status -s";
       ga = "git add";
       gc = "git commit";
-      gca = "git commit -a";
+      gca = "git commit --all";
       gl = "git log --oneline -n 20";
       glg = "git log --oneline --graph --all --stat";
       gd = "git diff";
+      mkdir = "mkdir -p";
       nv = "nvim";
-      f = "fzf";
     };
   };
 }
