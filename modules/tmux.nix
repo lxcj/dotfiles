@@ -17,6 +17,8 @@
       set -g status-style bg=default,fg=blue,bright
       set -g pane-active-border-style fg=blue
       set -g pane-border-style "fg=black"
+      set -g extended-keys on
+      set -g extended-keys-format csi-u
     '';
   };
 }
