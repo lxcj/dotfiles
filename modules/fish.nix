@@ -26,7 +26,7 @@
       la = "ls -A";
       ll = "ls -l";
       lla = "ls -lA";
-      lt = "tree -L 3 -a -I '.git'";
+      lt = "tree -L 3 -a -I '.git|.jj'";
       tmp = "cd $(mktemp -d)"; # cd to a new temp folder
     };
     shellAbbrs = {
