@@ -20,6 +20,18 @@
       set -g extended-keys on
       set -g extended-keys-format csi-u
 
+      # Allow pane navigation with prefix + hjkl (Vim-style)
+      bind h select-pane -L
+      bind j select-pane -D
+      bind k select-pane -U
+      bind l select-pane -R
+
+      # Allow pane navigation with Alt instead of prefix
+      bind -n M-h select-pane -L
+      bind -n M-j select-pane -D
+      bind -n M-k select-pane -U
+      bind -n M-l select-pane -R
+
       # Switch session via fzf popup (prefix + C-s)
       bind-key C-s display-popup -E \
         "tmux list-sessions -F '#S' | fzf --reverse --height=100% | xargs tmux switch-client -t"
