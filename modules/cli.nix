@@ -24,6 +24,10 @@
     enable = true;
   };
 
+  programs.jq = {
+    enable = true;
+  };
+
   programs.navi = {
     enable = true;
     enableFishIntegration = true;
