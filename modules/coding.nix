@@ -3,7 +3,6 @@
   imports = [
     ./helix.nix
     ./neovim.nix
-    ./opencode.nix
 
     ./go.nix
     ./python.nix

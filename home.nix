@@ -9,6 +9,7 @@
   programs.home-manager.enable = true;
 
   imports = [
+    ./modules/agents.nix
     ./modules/cli.nix
     ./modules/coding.nix
     ./modules/ssh.nix
