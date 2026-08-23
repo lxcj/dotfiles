@@ -8,6 +8,7 @@
     ./python.nix
     ./ruby.nix
     ./rust.nix
+    ./typescript.nix
   ];
 
   home.packages = with pkgs; [
