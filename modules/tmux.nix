@@ -32,6 +32,10 @@
       bind -n M-k select-pane -U
       bind -n M-l select-pane -R
 
+      # Allow config reloading using prefix + r
+      unbind r
+      bind r source-file $HOME/.config/tmux/tmux.conf \; display-message "Config reloaded."
+
       # Switch session via fzf popup (prefix + C-s)
       bind-key C-s display-popup -E \
         "tmux list-sessions -F '#S' | fzf --reverse --height=100% | xargs tmux switch-client -t"
