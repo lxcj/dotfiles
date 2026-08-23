@@ -11,7 +11,6 @@
   imports = [
     ./modules/cli.nix
     ./modules/coding.nix
-    ./modules/fish.nix
     ./modules/ssh.nix
   ];
 
