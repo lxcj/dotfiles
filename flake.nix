@@ -24,14 +24,10 @@
 
           home-manager.nixosModules.home-manager
           {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users."lx" = {
-                imports = [ ./home.nix ];
-              };
-              backupFileExtension = "backup";
-            };
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.lx.imports = [ ./home.nix ];
+            home-manager.backupFileExtension = "backup";
           }
         ];
       };
