@@ -25,6 +25,10 @@
       set -g extended-keys on
       set -g extended-keys-format csi-u
 
+      # Status bar right side: "tmux" label that turns red+bold while prefix is held
+      set -g status-right-length 20
+      set -g status-right '#{?client_prefix,#[fg=red]#[bold],#[fg=blue,bright]}tmux'
+
       # Allow pane navigation with prefix + hjkl (Vim-style)
       bind h select-pane -L
       bind j select-pane -D
