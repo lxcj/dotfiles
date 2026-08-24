@@ -20,6 +20,7 @@
       set-option -g renumber-windows on
       set -g status-position top
       set -g status-style bg=default,fg=blue,bright
+      set -g window-status-current-style "fg=magenta"
       set -g pane-active-border-style fg=blue
       set -g pane-border-style "fg=black"
       set -g extended-keys on
