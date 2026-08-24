@@ -36,7 +36,6 @@ in
       line-numbers = true;
       side-by-side = true;
       features = "catppuccin-macchiato";
-      syntax-theme = "Catppuccin Macchiato";
       catppuccin-macchiato = {
         blame-palette = "#24273a #1e2030 #181926 #363a4f #494d64";
         commit-decoration-style = "#6e738d bold box ul";
