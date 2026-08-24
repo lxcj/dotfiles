@@ -39,6 +39,10 @@
       # Switch session via fzf popup (prefix + C-s)
       bind-key C-s display-popup -E \
         "tmux list-sessions -F '#S' | fzf --reverse --height=100% | xargs tmux switch-client -t"
+
+      # Switch window via fzf popup (prefix + C-w)
+      bind-key C-w display-popup -E \
+        "tmux list-windows -a -F '#S:#I #W' | fzf --reverse --height=100% | cut -d' ' -f1 | xargs tmux switch-client -t"
     '';
   };
 }
