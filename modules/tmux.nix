@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.tmux = {
     enable = true;
@@ -8,6 +8,11 @@
     prefix = "C-a";
     baseIndex = 1;
     terminal = "tmux-256color";
+
+    plugins = with pkgs.tmuxPlugins; [
+      resurrect
+      continuum
+    ];
     extraConfig = ''
       set -ga terminal-overrides ",*:RGB"
       unbind -T root MouseDown3Pane # Disable right click menu
@@ -36,13 +41,21 @@
       unbind r
       bind r source-file $HOME/.config/tmux/tmux.conf \; display-message "Config reloaded."
 
-      # Switch session via fzf popup (prefix + C-s)
-      bind-key C-s display-popup -E \
+      # Switch session via fzf popup (prefix + C-f)
+      bind-key C-f display-popup -E \
         "tmux list-sessions -F '#S' | fzf --reverse --height=100% | xargs tmux switch-client -t"
 
       # Switch window via fzf popup (prefix + C-w)
       bind-key C-w display-popup -E \
         "tmux list-windows -a -F '#S:#I #W' | fzf --reverse --height=100% | cut -d' ' -f1 | xargs tmux switch-client -t"
+
+      # tmux-resurrect: (manual save: prefix + C-s, restore: prefix + C-r)
+      set -g @resurrect-capture-pane-contents "on"
+      # Restore running processes in panes
+      set -g @resurrect-processes 'pi opencode'
+
+      # tmux-continuum: auto-restore when the tmux server starts (saves every 15 min by default)
+      set -g @continuum-restore "on"
     '';
   };
 }
