@@ -3,7 +3,6 @@
   programs.tmux = {
     enable = true;
     mouse = true;
-    keyMode = "vi";
     clock24 = true;
     prefix = "C-a";
     baseIndex = 1;
