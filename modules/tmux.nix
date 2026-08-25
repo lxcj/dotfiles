@@ -42,6 +42,10 @@
       bind -n M-k select-pane -U
       bind -n M-l select-pane -R
 
+      # Allow window switching with Shift + arrow keys
+      bind -n S-Left  previous-window
+      bind -n S-Right next-window
+
       # Allow config reloading using prefix + r
       unbind r
       bind r source-file $HOME/.config/tmux/tmux.conf \; display-message "Config reloaded."
