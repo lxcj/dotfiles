@@ -51,6 +51,9 @@
       unbind r
       bind r source-file $HOME/.config/tmux/tmux.conf \; display-message "Config reloaded."
 
+      # Terminal popup
+      bind C-t display-popup -E "fish"
+
       # Switch session via fzf popup (prefix + C-f)
       bind-key C-f display-popup -E \
         "tmux list-sessions -F '#S' | fzf --reverse --height=100% | xargs tmux switch-client -t"
