@@ -3,6 +3,8 @@
   wsl.enable = true;
   wsl.defaultUser = "lx";
 
+  time.timeZone = "Europe/Paris";
+
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
 
