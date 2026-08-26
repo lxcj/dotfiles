@@ -27,3 +27,13 @@ keymap({ 'c' }, '<cr>', '<C-]><cr>')
 keymap("i", ";;", "<Esc>m`A;<Esc>`'li", { desc = "Add semicolon at EOL (Insert Mode)" })
 keymap("i", ",,", "<Esc>m`A,<Esc>`'li", { desc = "Add comma at EOL (Insert Mode)" })
 
+-- Disable yank on delete/change
+keymap({ "n", "v" }, "d", '"_d')
+keymap({ "n", "v" }, "D", '"_D')
+keymap({ "n", "v" }, "c", '"_c')
+keymap({ "n", "v" }, "C", '"_C')
+keymap({ "n", "v" }, "s", '"_s')
+keymap({ "n", "v" }, "S", '"_S')
+keymap("n", "x", '"_x')
+keymap("n", "X", '"_X')
+
