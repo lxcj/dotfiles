@@ -25,6 +25,8 @@
       set -g extended-keys on
       set -g extended-keys-format csi-u
 
+      set -g status-left-length 30
+
       # Status bar right side: "tmux" label that turns red+bold while prefix is held
       set -g status-right-length 20
       set -g status-right '#{?client_prefix,#[fg=red]#[bold],#[fg=blue,bright]}tmux'
