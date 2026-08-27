@@ -55,12 +55,15 @@
       bind C-t display-popup -E "fish"
 
       # Switch session via fzf popup (prefix + C-f)
+      # xargs -I {} keeps the whole line as one arg so session names with spaces work
       bind-key C-f display-popup -E \
-        "tmux list-sessions -F '#S' | fzf --reverse --height=100% | xargs tmux switch-client -t"
+        "tmux list-sessions -F '#S' | fzf --reverse --height=100% | xargs -I {} tmux switch-client -t {}"
 
       # Switch window via fzf popup (prefix + C-w)
+      # '|' delimiter isolates the switch target (#S:#I) from the window name (#W),
+      # so window names containing spaces don't break the cut; xargs -I {} preserves spaces.
       bind-key C-w display-popup -E \
-        "tmux list-windows -a -F '#S:#I #W' | fzf --reverse --height=100% | cut -d' ' -f1 | xargs tmux switch-client -t"
+        "tmux list-windows -a -F '#S:#I|#W' | fzf --reverse --height=100% | cut -d'|' -f1 | xargs -I {} tmux switch-client -t {}"
 
       # tmux-resurrect: (manual save: prefix + C-s, restore: prefix + C-r)
       set -g @resurrect-capture-pane-contents "on"
