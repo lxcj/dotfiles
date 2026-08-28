@@ -14,7 +14,6 @@
   ];
 
   programs.fd.enable = true;
-  programs.ripgrep.enable = true;
   programs.jq.enable = true;
 
   programs.bat = {
@@ -25,6 +24,13 @@
   programs.navi = {
     enable = true;
     enableFishIntegration = true;
+  };
+
+  programs.ripgrep = {
+    enable = true;
+    arguments = [
+      "--smart-case" # Search case-insensitively
+    ];
   };
 
   programs.tealdeer = {
