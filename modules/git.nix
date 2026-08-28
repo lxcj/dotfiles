@@ -22,15 +22,9 @@ in
     };
   };
 
-  programs.jujutsu = {
-    enable = true;
-    settings.user = gitUser;
-  };
-
   programs.delta = {
     enable = true;
     enableGitIntegration = true;
-    enableJujutsuIntegration = true;
     options = {
       navigate = false;
       line-numbers = true;
