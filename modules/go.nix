@@ -7,7 +7,5 @@
     golangci-lint-langserver
   ];
 
-  programs.go = {
-    enable = true;
-  };
+  programs.go.enable = true;
 }

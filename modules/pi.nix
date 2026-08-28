@@ -27,14 +27,11 @@ let
 in
 {
   home.packages = with pkgs; [
-      pi-coding-agent
+    pi-coding-agent
   ];
 
   home.file.".pi/agent/prompts".source = config.lib.file.mkOutOfStoreSymlink
     "${config.home.homeDirectory}/dotfiles/config/agents/pi/prompts";
-
-  home.file.".pi/agent/skills".source = config.lib.file.mkOutOfStoreSymlink
-    "${config.home.homeDirectory}/dotfiles/config/agents/pi/skills";
 
   home.file.".pi/agent/themes/catppuccin-macchiato.json".text = builtins.toJSON {
     "$schema" = "https://raw.githubusercontent.com/earendil-works/pi/main/packages/coding-agent/src/modes/interactive/theme/theme-schema.json";

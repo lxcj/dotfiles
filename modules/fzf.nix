@@ -3,6 +3,7 @@
   programs.fzf = {
     enable = true;
     enableFishIntegration = true;
+
     colors = {
       # Catppuccin Macchiato
       fg = "#cad3f5";

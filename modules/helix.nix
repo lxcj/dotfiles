@@ -2,8 +2,10 @@
 {
   programs.helix = {
     enable = true;
+
     settings = {
       theme = "catppuccin_macchiato";
+
       editor = {
         true-color = true;
         color-modes = true;
@@ -16,6 +18,7 @@
       };
       editor.file-picker.hidden = false;
       editor.lsp.auto-signature-help = false;
+
       keys.normal = {
         esc = ["collapse_selection" "keep_primary_selection"];
         D = "kill_to_line_end";

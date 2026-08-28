@@ -25,6 +25,7 @@ in
   programs.delta = {
     enable = true;
     enableGitIntegration = true;
+
     options = {
       navigate = false;
       line-numbers = true;

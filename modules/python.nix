@@ -4,11 +4,6 @@
     python3
   ];
 
-  programs.ruff = {
-    enable = true;
-  };
-
-  programs.uv = {
-    enable = true;
-  };
+  programs.ruff.enable = true;
+  programs.uv.enable = true;
 }

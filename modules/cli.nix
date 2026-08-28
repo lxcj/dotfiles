@@ -13,21 +13,13 @@
     tree
   ];
 
+  programs.fd.enable = true;
+  programs.ripgrep.enable = true;
+  programs.jq.enable = true;
+
   programs.bat = {
     enable = true;
     config.theme = "Catppuccin Macchiato";
-  };
-
-  programs.fd = {
-    enable = true;
-  };
-
-  programs.ripgrep = {
-    enable = true;
-  };
-
-  programs.jq = {
-    enable = true;
   };
 
   programs.navi = {

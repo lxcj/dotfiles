@@ -2,6 +2,7 @@
 {
   programs.tmux = {
     enable = true;
+
     mouse = true;
     clock24 = true;
     prefix = "C-a";
@@ -12,6 +13,7 @@
       resurrect
       continuum
     ];
+
     extraConfig = ''
       set -ga terminal-overrides ",*:RGB"
       unbind -T root MouseDown3Pane # Disable right click menu
