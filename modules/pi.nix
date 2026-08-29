@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 let
   macchiato = {
     base = "#24273a";
@@ -30,8 +30,34 @@ in
     pi-coding-agent
   ];
 
-  home.file.".pi/agent/prompts".source = config.lib.file.mkOutOfStoreSymlink
-    "${config.home.homeDirectory}/dotfiles/config/agents/pi/prompts";
+  home.file.".pi/agent/prompts/scaffold.md".text = ''
+  ---
+  description: Greenfield app spec skeleton
+  argument-hint: "[what to build]"
+  ---
+  Build $1. Before writing code, confirm this spec with me:
+    - **Stack**: framework, language, runtime (e.g. SvelteKit + Svelte 5 + TS)
+    - **Persistence**: localStorage / backend / file
+    - **Must-have features**: (list the 5–10 that define "done")
+    - **Scope**: MVP only / stretch goals
+    - **Design reference**: attach a screenshot or name an app to match
+  Produce a short plan first; wait for my approval before coding.
+  '';
+
+  home.file.".pi/agent/prompts/review.md".text = ''
+  ---
+  description: Review uncommitted and staged git changes for bugs, security, and quality
+  argument-hint: "[commit range]"
+  ---
+  Review the current git changes.
+
+  1. Run `git status --short` and `git diff` (`git diff --cached` for staged).
+  2. Analyze for bugs, security issues, error-handling gaps, and intent mismatches.
+  3. List findings with `file:line` and a concrete fix each.
+  4. If clean, say so.
+
+  $ARGUMENTS
+  '';
 
   home.file.".pi/agent/themes/catppuccin-macchiato.json".text = builtins.toJSON {
     "$schema" = "https://raw.githubusercontent.com/earendil-works/pi/main/packages/coding-agent/src/modes/interactive/theme/theme-schema.json";
