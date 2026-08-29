@@ -3,12 +3,6 @@
   imports = [
     ./helix.nix
     ./neovim.nix
-
-    ./go.nix
-    ./python.nix
-    ./ruby.nix
-    ./rust.nix
-    ./typescript.nix
   ];
 
   home.packages = with pkgs; [
@@ -22,16 +16,46 @@
     libclang
     lldb
 
-    # Node.js
-    nodejs_26
-    pnpm
+    # Go
+    gopls
+    delve
+    golangci-lint
+    golangci-lint-langserver
 
     # Nix
     nil
     nixfmt
 
+    # Node.js
+    nodejs_26
+    pnpm
+
+    # Python
+    python3
+
+    # Ruby
+    ruby_4_0
+    ruby-lsp
+
+    # Rust
+    rustc
+    cargo
+    clippy
+    rust-analyzer
+    rustfmt
+
+    # TypeScript
+    typescript-go
+    typescript-language-server
+    oxlint
+    oxfmt
+
     # Zig
     zig
     zls
   ];
+
+  programs.go.enable = true;
+  programs.ruff.enable = true;
+  programs.uv.enable = true;
 }
