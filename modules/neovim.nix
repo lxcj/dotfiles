@@ -15,45 +15,55 @@ in
     globals.mapleader = " ";
 
     opts = {
-      mouse = "nv"; # Enable mouse in normal and visual mode
+      mouse       = "nv";          # Enable mouse in normal and visual mode
+      winborder   = borderstyle;   # Set border style for floating windows
+      clipboard   = "unnamedplus"; # Sync clipboard with system
+      undofile    = true;          # Enable undo history
+      confirm     = true;          # Enable confirm dialog for unsaved changes
+      showmode    = false;         # Hide mode as it is shown in the status line
 
-      winborder = borderstyle; # Set border style for floating windows
+      number         = true;       # Show line numbers
+      relativenumber = true;       # Show relative line numbers
 
-      clipboard = "unnamedplus"; # Sync clipboard with system
-      undofile = true; # Enable undo history
-      confirm = true; # Enable confirm dialog for unsaved changes
-      showmode = false; # Hide mode as it is shown in the status line
-
-      number = true;         # Show line numbers
-      relativenumber = true; # Show relative line numbers
+      wrap = false;                # Disable line wrap
 
       # Set indentation
-      tabstop = 2;
-      softtabstop = 2;
-      shiftwidth = 2;
-      expandtab = true;
-      smartindent = true;
-
-      wrap = false; # Disable line wrap
+      tabstop      = 2;
+      softtabstop  = 2;
+      shiftwidth   = 2;
+      expandtab    = true;
+      smartindent  = true;
 
       # Make search case-insensitive
       ignorecase = true;
-      smartcase = true;
+      smartcase  = true;
 
-      scrolloff = 8;
+      scrolloff     = 8;
       sidescrolloff = 8;
 
       updatetime = 300;
       timeoutlen = 300;
 
-      completeopt = [ "menuone" "noselect" "popup" ];
+      completeopt = [
+        "menuone"
+        "noselect"
+        "popup"
+      ];
     };
 
     keymaps = [
-      { mode = "n"; key = "<Esc>"; action = "<cmd>nohlsearch<cr>"; } # Clear search highlights
+      # Clear search highlights
+      { mode = "n"; key = "<Esc>"; action = "<cmd>nohlsearch<cr>"; }
 
-      { mode = "i"; key = ";;"; action = "<Esc>m`A;<Esc>`'li"; } # Add semicolon at EOL
-      { mode = "i"; key = ",,"; action = "<Esc>m`A,<Esc>`'li"; } # Add comma at EOL
+      # Add semicolon or comma at end of line
+      { mode = "i"; key = ";;"; action = "<Esc>m`A;<Esc>`'li"; }
+      { mode = "i"; key = ",,"; action = "<Esc>m`A,<Esc>`'li"; }
+      
+      # Command-mode typo fixes
+      { mode = "ca"; key = "W";    action = "w"; }
+      { mode = "ca"; key = "Q";    action = "q"; }
+      { mode = "ca"; key = "Wq";   action = "wq"; }
+      { mode = "c";  key = "<cr>"; action = "<C-]><cr>"; }
 
       # Disable yank on delete/change
       { mode = [ "n" "v" ]; key = "d"; action = "\"_d"; }
@@ -65,15 +75,19 @@ in
       { mode = "n"; key = "x"; action = "\"_x"; }
       { mode = "n"; key = "X"; action = "\"_X"; }
     ];
-
+   
     autoCmd = [
-      { event = [ "VimEnter" ]; nested = true; callback.__raw = ''
-        function()
-          if vim.fn.argc() == 0 then
-            require("persistence").load()
+      {
+        event = [ "VimEnter" ];
+        nested = true;
+        callback.__raw = ''
+          function()
+            if vim.fn.argc() == 0 then
+              require("persistence").load()
+            end
           end
-        end
-      ''; }
+        '';
+      }
       { event = "TextYankPost"; command = "lua vim.highlight.on_yank()"; }
       {
         event = "LspAttach";
@@ -82,7 +96,7 @@ in
             local client = vim.lsp.get_client_by_id(args.data.client_id)
 
             if client ~= nil and client:supports_method("textDocument/completion") then
-              vim.lsp.completion.enable( true, client.id, args.buf, { autotrigger = true })
+              vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
             end
           end
         '';
@@ -103,21 +117,28 @@ in
       };
     };
 
-    lsp.servers = {
-      bashls.enable = true;
-      cssls.enable = true;
-      gopls.enable = true;
-      html.enable = true;
-      lua_ls.enable = true;
-      nil_ls.enable = true;
-      oxfmt.enable = true;
-      oxlint.enable = true;
-      ruby_lsp.enable = true;
-      rust_analyzer.enable = true;
-      taplo.enable = true;
-      ts_ls.enable = true;
-      zls.enable = true;
-    };
+    lsp.servers = builtins.listToAttrs (
+      map
+        (name: {
+          inherit name;
+          value.enable = true;
+        })
+        [
+          "bashls"
+          "cssls"
+          "gopls"
+          "html"
+          "lua_ls"
+          "nil_ls"
+          "oxfmt"
+          "oxlint"
+          "ruby_lsp"
+          "rust_analyzer"
+          "taplo"
+          "ts_ls"
+          "zls"
+        ]
+    );
 
     plugins.gitsigns.enable = true;
     plugins.lspconfig.enable = true;

@@ -11,11 +11,13 @@
         color-modes = true;
         default-yank-register = "+";
       };
+
       editor.cursor-shape = {
         normal = "block";
         insert = "bar";
         select = "underline";
       };
+
       editor.file-picker.hidden = false;
       editor.lsp.auto-signature-help = false;
 
@@ -26,10 +28,12 @@
         c = "change_selection_noyank";
         C-p = "signature_help";
       };
+
       keys.insert = {
         esc = ["collapse_selection" "keep_primary_selection" "normal_mode"];
         C-p = "signature_help";
       };
+
       keys.select = {
         esc = ["collapse_selection" "keep_primary_selection" "normal_mode"];
         y = ["yank_main_selection_to_clipboard" "normal_mode"];

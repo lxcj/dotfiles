@@ -2,12 +2,14 @@
 {
   programs.fish = {
     enable = true;
+
     plugins = [
       {
         name = "hydro";
         src = pkgs.fishPlugins.hydro.src;
       }
     ];
+
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
       set -g fish_autosuggestion_enabled 0
@@ -20,6 +22,7 @@
       set fish_color_valid_path
       set fish_color_option normal
     '';
+
     shellAliases = {
       cat = "bat --plain";
       ls = "ls -1Fv --group-directories-first --color=auto";
@@ -29,6 +32,7 @@
       lt = "tree -L 3 -a -I '.git|.jj|node_modules'";
       tmp = "cd $(mktemp -d)"; # cd to a new temp folder
     };
+
     shellAbbrs = {
       c = "clear";
       f = "fzf";

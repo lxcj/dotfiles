@@ -8,6 +8,7 @@ in
 {
   programs.git = {
     enable = true;
+
     settings = {
       init.defaultBranch = "main";
       user = gitUser;
@@ -17,6 +18,7 @@ in
 
   programs.gh = {
     enable = true;
+
     settings = {
       git_protocol = "ssh";
     };
