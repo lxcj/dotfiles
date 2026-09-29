@@ -45,7 +45,7 @@
     rustfmt
 
     # TypeScript
-    typescript-go
+    typescript
     typescript-language-server
     oxlint
     oxfmt
