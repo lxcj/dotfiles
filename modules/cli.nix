@@ -15,6 +15,7 @@
 
   programs.fd.enable = true;
   programs.jq.enable = true;
+  programs.yt-dlp.enable = true;
 
   programs.bat = {
     enable = true;
