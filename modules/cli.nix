@@ -1,10 +1,11 @@
 { pkgs, ... }:
 {
   imports = [
-    ./direnv.nix
     ./fish.nix
     ./fzf.nix
     ./git.nix
+    ./opencode.nix
+    ./pi.nix
     ./tmux.nix
   ];
 
@@ -13,6 +14,7 @@
     tree
   ];
 
+  programs.codex.enable = true;
   programs.fd.enable = true;
   programs.jq.enable = true;
   programs.yt-dlp.enable = true;
@@ -20,6 +22,11 @@
   programs.bat = {
     enable = true;
     config.theme = "Catppuccin Macchiato";
+  };
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
   };
 
   programs.navi = {
