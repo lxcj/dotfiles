@@ -1,3 +1,5 @@
+[init]
+    defaultBranch = main
 [user]
 	name = lxcj
 	email = 1714997+lxcj@users.noreply.github.com
