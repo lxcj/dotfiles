@@ -1,0 +1,6 @@
+[settings.ruby]
+compile = false
+
+[settings.python]
+compile = false
+

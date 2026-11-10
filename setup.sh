@@ -7,16 +7,25 @@ DOTFILES="$HOME/dotfiles"
 echo "==> Installing packages..."
 
 sudo apt install -y \
-    gpg \
     stow \
+    extrepo \
+    gpg \
     curl \
     wget \
     vim \
     fzf \
     fd-find \
-    gcc \
+    build-essential \
     clang \
     lldb
+
+if ! command -v mise >/dev/null 2>&1; then
+    echo
+    echo "==> Installing mise..."
+    sudo extrepo enable mise
+    sudo apt update
+    sudo apt install -y mise
+fi
 
 echo
 echo "==> Creating symlinks..."
