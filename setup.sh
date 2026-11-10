@@ -7,6 +7,7 @@ DOTFILES="$HOME/dotfiles"
 echo "==> Installing packages..."
 
 sudo apt install -y \
+    gpg \
     stow \
     vim \
     fzf \
