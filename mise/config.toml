@@ -1,0 +1,20 @@
+[settings.npm]
+package_manager = "pnpm"
+
+[settings.ruby]
+compile = false
+
+[settings.python]
+compile = false
+
+[tool_alias]
+tree-sitter = "github:tree-sitter/tree-sitter"
+
+[tools]
+lua-language-server = "latest"
+neovim = "latest"
+"npm:bash-language-server" = "latest"
+pnpm = "latest"
+rust = "latest"
+tree-sitter = "latest"
+

@@ -4,10 +4,16 @@ set -euo pipefail
 
 DOTFILES="$HOME/dotfiles"
 
+echo "==> Creating symlinks..."
+
+ln -sf $DOTFILES/bash/.bashrc ~/.bashrc
+ln -sf $DOTFILES/git/.gitconfig ~/.gitconfig
+ln -sf $DOTFILES/mise/config.toml ~/.config/mise/config.toml
+ln -sf $DOTFILES/neovim ~/.config/nvim
+
 echo "==> Installing packages..."
 
 sudo apt install -y \
-    stow \
     extrepo \
     gpg \
     curl \
@@ -26,16 +32,8 @@ if ! command -v mise >/dev/null 2>&1; then
     sudo extrepo enable mise
     sudo apt update
     sudo apt install -y mise
+    mise install
 fi
-
-echo
-echo "==> Creating symlinks..."
-
-cd "$DOTFILES"
-
-stow --restow bash
-stow --restow git
-stow --restow vim
 
 echo
 echo "Setup complete. Restart your shell for changes to take effect."

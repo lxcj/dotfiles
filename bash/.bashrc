@@ -18,7 +18,7 @@ shopt -s checkwinsize
 export TERM="xterm-256color"
 
 # Set default editor
-export EDITOR=vim
+export EDITOR=nvim
 
 # Custom prompt
 PS1='\[\033[01;34m\]\w\[\033[00m\]\n❯ '
@@ -51,6 +51,7 @@ alias gl='git log --oneline -n 10'
 alias gd='git diff'
 
 alias fd='fdfind'
+alias nv='nvim'
 
 # Search and edit dotfile
 dot() {
@@ -63,4 +64,22 @@ dot() {
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
+
+export FZF_DEFAULT_OPTS="--color=fg:#cdcdcd
+    --color=bg:#141415
+    --color=hl:#f3be7c
+    --color=fg+:#aeaed1
+    --color=bg+:#252530
+    --color=hl+:#f3be7c
+    --color=border:#606079
+    --color=header:#6e94b2
+    --color=gutter:#141415
+    --color=spinner:#7fa563
+    --color=info:#f3be7c
+    --color=pointer:#aeaed1
+    --color=marker:#d8647e
+    --color=prompt:#bb9dbd"
+
+# Set up mise
+eval "$(mise activate bash)"
 
