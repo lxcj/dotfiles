@@ -15,6 +15,7 @@ sudo apt install -y \
     vim \
     fzf \
     fd-find \
+    ripgrep \
     build-essential \
     clang \
     lldb
