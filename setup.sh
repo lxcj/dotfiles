@@ -9,7 +9,7 @@ echo "==> Creating symlinks..."
 ln -sf $DOTFILES/bash/.bashrc ~/.bashrc
 ln -sf $DOTFILES/git/.gitconfig ~/.gitconfig
 ln -sf $DOTFILES/mise/config.toml ~/.config/mise/config.toml
-ln -sf $DOTFILES/neovim ~/.config/nvim
+ln -sfnT $DOTFILES/neovim/ ~/.config/nvim
 
 echo "==> Installing packages..."
 
