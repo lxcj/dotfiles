@@ -9,6 +9,8 @@ echo "==> Installing packages..."
 sudo apt install -y \
     gpg \
     stow \
+    curl \
+    wget \
     vim \
     fzf \
     fd-find
