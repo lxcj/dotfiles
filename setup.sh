@@ -13,7 +13,10 @@ sudo apt install -y \
     wget \
     vim \
     fzf \
-    fd-find
+    fd-find \
+    gcc \
+    clang \
+    lldb
 
 echo
 echo "==> Creating symlinks..."
