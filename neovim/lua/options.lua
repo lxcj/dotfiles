@@ -3,7 +3,7 @@ local o = vim.opt
 o.termguicolors = true
 o.winborder = 'single' -- Set border style for floating windows
 
-o.mouse = a -- Enable mouse
+o.mouse = 'a' -- Enable mouse
 o.scrolloff = 10
 o.sidescrolloff = 10
 

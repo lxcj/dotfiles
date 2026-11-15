@@ -2,22 +2,22 @@
 
 set -euo pipefail
 
-DOTFILES="$HOME/dotfiles"
+DOTFILES="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 
 echo "==> Creating symlinks..."
 
 mkdir -p ~/.config/mise
 mkdir -p ~/.config/tmux
 
-ln -sf $DOTFILES/bash/.bashrc ~/.bashrc
-ln -sf $DOTFILES/git/.gitconfig ~/.gitconfig
-ln -sf $DOTFILES/mise/config.toml ~/.config/mise/config.toml
-ln -sfnT $DOTFILES/neovim/ ~/.config/nvim
-ln -sf $DOTFILES/tmux/tmux.conf ~/.config/tmux/tmux.conf
+ln -sf $DOTFILES/bash/.bashrc $HOME/.bashrc
+ln -sf $DOTFILES/git/.gitconfig $HOME/.gitconfig
+ln -sf $DOTFILES/mise/config.toml $HOME/.config/mise/config.toml
+ln -sfnT $DOTFILES/neovim/ $HOME/.config/nvim
+ln -sf $DOTFILES/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
 
 echo "==> Installing packages..."
 
-sudo apt update && sudo apt upgrade -y
+sudo apt update
 sudo apt install -y \
     extrepo \
     gpg \

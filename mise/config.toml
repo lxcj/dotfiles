@@ -13,6 +13,7 @@ tree-sitter = "github:tree-sitter/tree-sitter"
 [tools]
 lua-language-server = "latest"
 neovim = "latest"
+node = "latest"
 "npm:bash-language-server" = "latest"
 pnpm = "latest"
 rust = "latest"
