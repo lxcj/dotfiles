@@ -1,11 +1,27 @@
 local map = vim.keymap.set
 
+-- Set space as leader key
 map('n', '<space>', '', { noremap = true, silent = true })
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Clear search highlights
 map('n', '<esc>', function() vim.cmd.nohlsearch() end)
+
+-- Add semicolon or comma at end of line (insert mode)
+map("i", ";;", "<Esc>m`A;<Esc>`'li", { desc = "Add semicolon at EOL" })
+map("i", ",,", "<Esc>m`A,<Esc>`'li", { desc = "Add comma at EOL" })
+
+-- Fix command typos + shortcuts
+local remaps = {
+    ['W'] = 'w',
+    ['Q'] = 'q',
+    ['Wq'] = 'wq',
+}
+for k, v in pairs(remaps) do
+    map('ca', k, v)
+end
+map({ 'c' }, '<cr>', '<C-]><cr>')
 
 -- fzf
 local fzf = require('fzf-lua')

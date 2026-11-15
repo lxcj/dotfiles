@@ -34,7 +34,7 @@ vim.lsp.config('lua_ls', {
 vim.lsp.enable({
     'lua_ls',
     'nil_ls',
-    'bashls',
+    -- 'bashls', -- TODO: investigate error on startup
     'rust_analyzer',
     'ruby_lsp',
     'html',
