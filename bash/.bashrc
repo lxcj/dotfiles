@@ -53,14 +53,7 @@ alias gd='git diff'
 alias fd='fdfind'
 alias nv='nvim'
 
-# Search and edit dotfile
-dot() {
-    local file=$(
-        fd --type f --hidden --exclude .git . "$HOME/dotfiles" |
-        fzf --prompt="dotfiles > " --reverse
-    )
-    [[ -n "$file" ]] && $EDITOR "$file"
-}
+alias dot='cd $HOME/dotfiles' # Change dir to dotfiles
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
