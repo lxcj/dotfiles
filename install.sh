@@ -9,6 +9,7 @@ echo "==> Creating symlinks..."
 mkdir -p ~/.config/mise
 mkdir -p ~/.config/tmux
 mkdir -p ~/.config/bat/themes
+mkdir -p ~/.config/tealdeer
 
 ln -sf $DOTFILES/bash/.bashrc $HOME/.bashrc
 ln -sf $DOTFILES/git/.gitconfig $HOME/.gitconfig
@@ -16,6 +17,7 @@ ln -sf $DOTFILES/bat/'Catppuccin Macchiato.tmTheme' $HOME/.config/bat/themes/'Ca
 ln -sf $DOTFILES/mise/config.toml $HOME/.config/mise/config.toml
 ln -sfnT $DOTFILES/neovim/ $HOME/.config/nvim
 ln -sf $DOTFILES/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
+ln -sf $DOTFILES/tealdeer/config.toml $HOME/.config/tealdeer/config.toml
 
 batcat cache --build
 
@@ -33,6 +35,7 @@ sudo apt install -y \
     fd-find \
     ripgrep \
     jq \
+    tealdeer \
     build-essential \
     clang \
     lldb
@@ -45,6 +48,8 @@ if ! command -v mise >/dev/null 2>&1; then
     sudo apt install -y mise
     mise install
 fi
+
+tldr --update
 
 echo
 echo "Setup complete. Restart your shell for changes to take effect."
