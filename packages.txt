@@ -1,0 +1,17 @@
+bat
+build-essential
+clang
+curl
+extrepo
+fd-find
+fzf
+git
+gpg
+jq
+lldb
+man-db
+ripgrep
+tealdeer
+tmux
+vivid
+wget
