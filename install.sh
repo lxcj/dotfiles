@@ -19,8 +19,6 @@ ln -sfnT $DOTFILES/neovim/ $HOME/.config/nvim
 ln -sf $DOTFILES/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
 ln -sf $DOTFILES/tealdeer/config.toml $HOME/.config/tealdeer/config.toml
 
-batcat cache --build
-
 echo "==> Installing packages..."
 
 sudo apt update
@@ -50,6 +48,7 @@ if ! command -v mise >/dev/null 2>&1; then
     mise install
 fi
 
+batcat cache --build
 tldr --update
 
 echo
