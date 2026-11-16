@@ -36,6 +36,7 @@ sudo apt install -y \
     ripgrep \
     jq \
     tealdeer \
+    vivid \
     build-essential \
     clang \
     lldb

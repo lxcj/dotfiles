@@ -56,6 +56,8 @@ alias nv='nvim'
 
 alias dot='cd $HOME/dotfiles' # Change dir to dotfiles
 
+export LS_COLORS="$(vivid generate catppuccin-macchiato)"
+
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
 export FZF_DEFAULT_COMMAND='fdfind --type file --follow --hidden --exclude .git'
