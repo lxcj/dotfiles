@@ -37,7 +37,8 @@ sudo apt install -y \
     vivid \
     build-essential \
     clang \
-    lldb
+    lldb \
+    man-db
 
 if ! command -v mise >/dev/null 2>&1; then
     echo
