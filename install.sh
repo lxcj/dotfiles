@@ -32,6 +32,7 @@ sudo apt install -y \
     fzf \
     fd-find \
     ripgrep \
+    jq \
     build-essential \
     clang \
     lldb
