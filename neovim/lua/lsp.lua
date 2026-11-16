@@ -43,7 +43,5 @@ vim.lsp.enable({
     'gopls',
     'zls',
     'ts_ls',
-    'oxlint',
-    'oxfmt',
 })
 

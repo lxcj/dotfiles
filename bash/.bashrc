@@ -15,7 +15,7 @@ shopt -s histappend # append to the history file, don't overwrite it
 shopt -s checkwinsize
 
 # Set term colors
-export TERM="xterm-256color"
+export COLORTERM="truecolor"
 
 # Set default editor
 export EDITOR=nvim
@@ -58,20 +58,23 @@ alias dot='cd $HOME/dotfiles' # Change dir to dotfiles
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
 
-export FZF_DEFAULT_OPTS="--color=fg:#cdcdcd
-    --color=bg:#141415
-    --color=hl:#f3be7c
-    --color=fg+:#aeaed1
-    --color=bg+:#252530
-    --color=hl+:#f3be7c
-    --color=border:#606079
-    --color=header:#6e94b2
-    --color=gutter:#141415
-    --color=spinner:#7fa563
-    --color=info:#f3be7c
-    --color=pointer:#aeaed1
-    --color=marker:#d8647e
-    --color=prompt:#bb9dbd"
+# Catpuccin Macchiato for fzf
+export FZF_DEFAULT_OPTS="--color=fg:#cad3f5
+    --color=bg:#24273a
+    --color=hl:#ed8796
+    --color=fg+:#cad3f5
+    --color=bg+:#363a4f
+    --color=hl+:#ed8796
+    --color=border:#6e738d
+    --color=header:#ed8796
+    --color=gutter:#232136
+    --color=spinner:#f4dbd6
+    --color=info:#c6a0f6
+    --color=pointer:#f4dbd6
+    --color=marker:#b7bdf8
+    --color=prompt:#c6a0f6
+    --color=selected-bg:#494d64
+    --color=label:#cad3f5"
 
 # Set up mise
 eval "$(mise activate bash)"

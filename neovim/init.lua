@@ -2,14 +2,18 @@ vim.loader.enable()
 require('vim._core.ui2').enable {}
 
 vim.pack.add({
-    'https://github.com/vague-theme/vague.nvim',
+    'https://github.com/catppuccin/nvim',
     'https://github.com/neovim/nvim-lspconfig',
     'https://github.com/nvim-treesitter/nvim-treesitter',
     'https://github.com/ibhagwan/fzf-lua',
     'https://github.com/windwp/nvim-autopairs',
     'https://github.com/lewis6991/gitsigns.nvim'
 })
-vim.cmd.colorscheme('vague')
+
+require('catppuccin').setup {
+    flavour = 'macchiato',
+}
+vim.cmd.colorscheme('catppuccin')
 
 require 'options'
 require 'keymaps'
