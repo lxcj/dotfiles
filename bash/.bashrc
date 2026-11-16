@@ -50,6 +50,7 @@ alias gca='git commit --all'
 alias gl='git log --oneline -n 10'
 alias gd='git diff'
 
+alias bat='batcat --theme="Catppuccin Macchiato" --plain --paging=never'
 alias fd='fdfind'
 alias nv='nvim'
 

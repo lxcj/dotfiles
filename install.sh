@@ -8,12 +8,16 @@ echo "==> Creating symlinks..."
 
 mkdir -p ~/.config/mise
 mkdir -p ~/.config/tmux
+mkdir -p ~/.config/bat/themes
 
 ln -sf $DOTFILES/bash/.bashrc $HOME/.bashrc
 ln -sf $DOTFILES/git/.gitconfig $HOME/.gitconfig
+ln -sf $DOTFILES/bat/'Catppuccin Macchiato.tmTheme' $HOME/.config/bat/themes/'Catppuccin Macchiato.tmTheme'
 ln -sf $DOTFILES/mise/config.toml $HOME/.config/mise/config.toml
 ln -sfnT $DOTFILES/neovim/ $HOME/.config/nvim
 ln -sf $DOTFILES/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
+
+batcat cache --build
 
 echo "==> Installing packages..."
 
@@ -24,6 +28,7 @@ sudo apt install -y \
     curl \
     wget \
     vim \
+    bat \
     fzf \
     fd-find \
     ripgrep \
