@@ -22,7 +22,7 @@ alias la 'ls -A'
 alias ll 'ls -l'
 alias lla 'ls -lA'
 alias tmp 'cd $(mktemp -d)'
-alias cat 'bat --theme="Catppuccin Macchiato" --plain --paging=never'
+alias cat bat
 alias hx helix
 
 # Abbreviations
