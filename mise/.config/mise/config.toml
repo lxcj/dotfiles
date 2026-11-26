@@ -1,0 +1,8 @@
+[settings.npm]
+package_manager = "pnpm"
+
+[settings.ruby]
+compile = false
+
+[settings.python]
+compile = false
