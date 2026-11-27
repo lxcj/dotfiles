@@ -7,3 +7,6 @@ stow:
 
 install:
 	yay -S --needed - < packages.txt
+	mise install
+	tldr --update
+	bat cache --build
