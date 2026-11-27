@@ -17,6 +17,7 @@ select = "underline"
 esc = ["collapse_selection", "keep_primary_selection"]
 c = "change_selection_noyank"
 d = "delete_selection_noyank"
+M = "copy_selection_on_next_line" # multicursor
 C-p = "signature_help"
 
 [keys.insert]
