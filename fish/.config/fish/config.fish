@@ -3,7 +3,9 @@ if not status is-interactive
 end
 
 set -gx COLORTERM truecolor
-set -gx EDITOR helix
+set -gx EDITOR hx
+
+fish_add_path ~/.cargo/bin
 
 set fish_greeting # disable greeting
 set -g fish_autosuggestion_enabled 0
@@ -23,7 +25,6 @@ alias ll 'ls -l'
 alias lla 'ls -lA'
 alias tmp 'cd $(mktemp -d)'
 alias cat bat
-alias hx helix
 alias vi nvim
 alias nv nvim
 

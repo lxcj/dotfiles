@@ -17,13 +17,11 @@ select = "underline"
 esc = ["collapse_selection", "keep_primary_selection"]
 c = "change_selection_noyank"
 d = "delete_selection_noyank"
-X = "extend_line_above"
 C-p = "signature_help"
-D = "kill_to_line_end"
-# V = ["extend_line", "select_mode"]
 
 [keys.insert]
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
+"C-[" = ["collapse_selection", "keep_primary_selection", "normal_mode"]
 C-p = "signature_help"
 
 [keys.select]

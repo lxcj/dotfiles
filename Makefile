@@ -6,4 +6,4 @@ stow:
 	stow --restow git fish bat helix tmux mise tealdeer neovim
 
 install:
-	sudo pacman -S --needed - < packages.txt
+	yay -S --needed - < packages.txt
