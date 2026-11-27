@@ -24,6 +24,8 @@ alias lla 'ls -lA'
 alias tmp 'cd $(mktemp -d)'
 alias cat bat
 alias hx helix
+alias vi nvim
+alias nv nvim
 
 # Abbreviations
 abbr -a g git
