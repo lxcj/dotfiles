@@ -23,32 +23,20 @@ require 'lsp'
 require('nvim-autopairs').setup {}
 require('gitsigns').setup {}
 
-require('fzf-lua').setup {
-    winopts = {
-        preview = {
-            border = vim.o.winborder,
-        },
-        border = vim.o.winborder,
-    },
-    files = {
-        file_icons = false,
-        hidden = false,
-    },
-    defaults = {
-        formatter = 'path.dirname_first', -- Grey-out path before filename
-    },
-    keymap = {
-        fzf = {
-            ['alt-a'] = 'toggle-all',
-        },
-    },
-}
+require('fzf-lua').setup({
+  winopts = { border = vim.o.winborder, preview = { border = vim.o.winborder } },
+  files = { file_icons = false, hidden = false },
+  defaults = { formatter = 'path.dirname_first' }, -- Grey-out path before filename
+  keymap = { fzf = { ['alt-a'] = 'toggle-all' } },
+})
 
 local treesitter = require('nvim-treesitter')
 treesitter.setup {}
 treesitter.install {
     'lua',
     'bash',
+    'c',
+    'go',
 }
 
 vim.api.nvim_create_autocmd('FileType', {
